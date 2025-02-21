@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>관리자 고민 조회 및 답변</title>
+  <script type="module" src="header.js"></script>
+  <script type="module" src="admin_counseling.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .message-card {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .message-card strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .message-card textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+    .message-card button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #1E90FF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .message-card button:hover {
+      background: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>고민 상담 관리</h1>
+  <div id="admin-messages">고민을 불러오는 중...</div>
+</body>
+</html>

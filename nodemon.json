@@ -1,0 +1,6 @@
+{
+    "watch": ["C:/workspace/Wolf Rent/*.html", "C:/workspace/Wolf Rent/blog.rss"],
+    "ext": "html rss",
+    "exec": "node generate-sitemap.js"
+  }
+  

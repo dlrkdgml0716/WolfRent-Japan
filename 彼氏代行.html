@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- 메타 태그: 제목과 설명에 키워드 추가 -->
+  <title>会社紹介|彼氏代行・レンタル彼氏・恋人代行Wolf Rent - 役割代行サービス</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="レンタル彼氏の役割代行 彼氏代行まで！ wolfrentでデート、恋人代行など様々なコンテンツを確認してみてください。">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="彼氏代行レンタルボーイフレンドデート代行、ボーイフレンド代行、役割代行、荷客代行、ガールフレンド代行、レンタルガール">
+
+    <meta property="og:title" content="会社紹介|彼氏代行・レンタル彼氏・恋人代行Wolf Rent - 役割代行サービス">
+    <meta property="og:description" content="レンタル彼氏、役割代行、彼氏代行まで！ wolfrentでデート、恋人代行など様々なコンテンツを確認してみてください。">
+    <meta property="og:url" content="https://wolfrent.netlify.app/彼氏代行">
+    <meta property="og:image" content="https://wolfrent.netlify.app/logo.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wolf Rent - 彼氏代行＆カスタムデートサービス">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="会社紹介|彼氏代行・レンタル彼氏・恋人代行Wolf Rent - 役割代行サービス">
+    <meta name="twitter:description" content="レンタル彼氏の役割代行 彼氏代行まで！ wolfrentでデート、恋人代行など様々なコンテンツを確認してみてください。">
+    <meta name="twitter:image" content="https://wolfrent.netlify.app/logo.webp">
+
+    <link rel="canonical" href="https://wolfrent.netlify.app/彼氏代行">
+    <link rel="icon" type="image/webp" href="https://wolfrent.netlify.app/logo.webp">
+
+  <!-- [중요] Firebase 스크립트 제거하고, header.js만 import -->
+  <script type="module" src="header.js"></script>
+
+  <style>
+    :root {
+      --brand-color: #ffffff; 
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+      /* 스크롤 시 부드럽게 */
+      scroll-behavior: smooth;
+    }
+
+    /* 상단 헤더 (index.html과 동일) */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #1E1E1E; 
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+    /* 이미지 alt 속성 수정 */
+    .logo {
+      height: 80px;
+      width: 80px;
+      margin-right: 5px; 
+    }
+    .text {
+      height: 80px;
+      width: 160px; 
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    .nav-links a {
+      margin: 0 10px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: white;
+      background-color: #1E1E1E;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: font-size 0.3s ease;
+    }
+    .nav-links a:hover {
+      font-size: 20px;
+    }
+    .spacer {
+      flex-grow: 1;
+    }
+    .googleLogin {
+      margin-left: 20px;
+    }
+    .googleLogin img {
+      width: 200px;
+      cursor: pointer;
+    }
+    /* 현재 페이지 a.active */
+    .nav-links a.active {
+      color: var(--brand-color)!important;
+      border-bottom: 2px solid var(--brand-color);
+      padding-bottom: 3px;
+    }
+
+    .about-hero {
+      height: 450px;
+      position: relative;
+      background: url(kb1.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 70% 25%;
+      padding: 60px 20px;
+      text-align: center;
+      color: ivory;
+    }
+    .about-hero h1,
+    .about-hero p,
+    .home-button {
+      position: relative;
+      z-index: 2;
+    }
+    .about-hero h1 {
+      position: absolute;
+      left: 80px;
+      top: 110px;
+      font-size: 5em;
+      margin-bottom: 10px;
+      animation: slide 2s;
+    }
+    .about-hero p {
+      position: absolute;
+      left: 80px;
+      top: 230px;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      animation: slide 2s;
+    }
+    @keyframes slide {
+      from {
+        left: -70px;
+        opacity: 0;
+      }
+      to {
+        left: 80px;
+        opacity: 1;
+      }
+    }
+
+    /* 메인 컨텐츠 영역 */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section {
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto 40px auto;
+    }
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #1E1E1E;
+      text-align: center;
+    }
+    .section p {
+      font-size: 1.1em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .mission, .about, .services {
+      background: ivory;
+      padding: 40px 20px;
+      border-radius: 8px;
+      /* [추가] 스크롤 애니메이션 초기 설정 */
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .section ul {
+      list-style-position: inside;
+      padding-left: 0;
+      text-align: left;
+      display: inline-block;
+    }
+    .section li {
+      margin-bottom: 10px;
+      padding-left: 10px; 
+    }
+    @keyframes rotate-center {
+      0% { transform: rotate(0); }
+      100% { transform: rotate(360deg); }
+    }
+    .rotate-center {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      animation: rotate-center .6s ease-in-out both;
+    }
+
+    /* ===============================
+       [새 섹션] 팀 소개(Team Section)
+       카드 형태 + fade-in-up
+    ================================ */
+    .team {
+      background: #f5f5f5;
+      padding: 40px 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      opacity: 0; /* 스크롤 페이드인 초기 */
+      transform: translateY(40px);
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .team-member {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    .team-member img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .team-info {
+      padding: 15px;
+    }
+    .team-info h3 {
+      margin: 0;
+      font-size: 1.2em;
+      color: #1E1E1E;
+      margin-bottom: 5px;
+    }
+    .team-info p {
+      margin: 5px 0;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    /* 스크롤 페이드인 keyframes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =============================================
+       모바일 최적화를 위한 미디어 쿼리
+       (768px 이하 화면일 때 적용)
+    ============================================= */
+    @media (max-width: 768px) {
+      /* 헤더 구조 조정 */
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      /* 로고 크기 축소 */
+      .header-left .logo,
+      .header-left .text {
+        width: 60px;
+        height: 60px;
+      }
+      /* 내비게이션 링크 크기/여백 조정 */
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .nav-links a {
+        margin: 5px;
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      /* about-hero 영역 */
+      .about-hero {
+        height: auto;
+        padding: 40px 20px;
+      }
+      .about-hero h1 {
+        position: static;
+        font-size: 2em;
+        margin: 20px 0 10px 0;
+        left: auto;
+        top: auto;
+      }
+      .about-hero p {
+        position: static;
+        font-size: 1em;
+        margin: 10px 0 20px 0;
+        left: auto;
+        top: auto;
+      }
+      /* 회전 로고 숨김 또는 크기 축소 */
+      .rotate-center {
+        display: none;
+      }
+
+      /* 섹션 글자 크기 조정 */
+      .section h2 {
+        font-size: 1.5em;
+      }
+      .section p {
+        font-size: 1em;
+      }
+    }
+    /* 푸터 스타일 */
+    .footer-content {
+        text-align: center;
+        padding: 20px;
+    }
+    .footer-intro {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+    .footer-email, .footer-hours {
+        color: #555;
+        margin: 5px 0;
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wolfrent.netlify.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://wolfrent.netlify.app/彼氏代行"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Contents",
+            "item": "https://wolfrent.netlify.app/役割代行"
+        },
+        {
+            "@type": "ListItem",
+          "position": 4,
+          "name": "FAQ",
+          "item": "https://wolfrent.netlify.app/恋人代行"
+        },
+        {
+            "@type": "ListItem",
+          "position": 5,
+          "name": "Review",
+          "item": "https://wolfrent.netlify.app/日本のレンタルボーイフレンド"
+        },
+        {
+            "@type": "ListItem",
+          "position": 6,
+          "name": "Counseling",
+          "item": "https://wolfrent.netlify.app/レンタルボーイフレンド"
+        }
+      ]
+    }
+</script>
+</head>
+<body>
+  <!-- 상단 헤더 -->
+  <header>
+    <div class="header-left">
+      <!-- 이미지 alt 속성 수정 -->
+      <img class="logo" src="logo.webp" alt="彼氏代行サービスを提供するウルフレントのロゴ" loading="lazy">
+      <img class="text" src="text.webp" alt="レンタルボーイフレンドサービスを提供するウルフレントのロゴ" loading="lazy">
+      <nav class="nav-links" aria-label="주요 메뉴">
+        <!-- active 클래스가 적용되면 '홈' 메뉴가 강조됩니다 -->
+        <a href="index.html" class="button">Home</a>
+        <a href="彼氏代行.html" class="button active">About</a>
+        <a href="役割代行.html" class="button">Contents</a>
+        <a href="애인대행.html" class="button">FAQ</a>
+        <a href="日本のレンタルボーイフレンド.html" class="button">Review</a>
+        <a href="レンタルボーイフレンド.html" class="button">Counseling</a>
+    </nav>
+    </div>
+    <div class="spacer"></div>
+    <form>
+      <div class="googleLogin">
+        <div class="googleLogin">
+          <img
+            id="googleLogin"
+            src="googlelogin.webp"
+            alt="Sign in with Google"
+            class="login-button"
+            style="width: 200px; height: 50px; cursor: pointer;"
+            loading="lazy"
+          />
+      </div>
+    </form>
+  </header>
+
+  <!-- about-hero (기존 header 부분) -->
+  <section class="about-hero">
+    <h1>ウルフレントについて</h1>
+    <p>私たちのビジョン、ミッション、そして独創的なサービスをチェックしてください</p>
+    <!-- 이미지 alt 속성 수정 -->
+    <img src="logo.webp" width="100" height="100" alt="彼氏代行レンタルボーイフレンドサービスを提供するウルフレントのロゴ" class="rotate-center" loading="lazy">
+  </section>
+  
+  <div class="container">
+    <!-- 회사 소개 섹션: 헤딩 구조 보강 -->
+    <section class="section about">
+      <h2>会社紹介 – 彼氏代行・レンタルボーイフレンド専門ウルフレント</h2>
+      <p>
+        ウルフレントは、顧客に合わせたボーイフレンド代理店とレンタルボーイフレンドサービスを提供する専門企業です。単純な同行サービスを超えて、 
+        顧客のライフスタイルと個々の好みを考慮したカスタマイズされた経験を提供することを目指します。
+        ウルフレントはお客様一人一人の期待を尊重し、より質の高い差別化されたサービスを提供するために絶えず努力します。
+      </p>
+    </section>
+    
+    <!-- 미션 및 비전 섹션: 헤딩 구조 보강 -->
+    <section class="section mission">
+      <h2>ミッション＆ビジョン – 彼氏代行・レンタルボーイフレンドで作っていく未来</h2>
+      <p>
+        顧客に単純な同行ではなく、カスタマイズされた感性体験を提供することで、特別な瞬間をより意味のあるものにすることです。 
+        顧客が望む状況と期待を反映して、真の交感を通じた感動を与えることが私たちの重要な価値です。 
+        また、忙しい現代社会で関係の空白を感じるお客様に心理的安定と満足感を提供することにより、より豊かな生活を支援することを目指します。
+      </p>
+    </section>
+    
+    <!-- 서비스 소개 섹션: 헤딩 구조 보강 -->
+    <section class="section services">
+      <h2>サービス紹介 – 彼氏代行・レンタルボーイフレンドで味わう特別な経験</h2>
+      <p>ウルフレントは、次のニーズを持つお客様のために設計されています。</p>
+      
+      <ul>
+          <li>記念日、イベントなど特別な瞬間を共にする仲間が必要な場合</li>
+          <li>細心の配慮とマナーを持つパートナーとの交流を希望する場合</li>
+          <li>日常から離れて新しい経験と感性を感じたい場合</li>
+      </ul>
+      <p>
+        ウルフレントは、厳格な基準に基づいて検証された男性パートナーを通じて顧客に信頼できるサービスを提供します。  
+        すべてのパートナーは徹底した審査を経て選抜され、マナー、会話能力、状況対処能力など様々な要素を考慮して教育・管理されます。
+      </p>
+  
+      <p>
+        また、お客様の個人情報保護と安全な利用環境づくりを最優先とし、  
+        サービス利用の過程でお客様が快適で満足のいく体験をすることをお約束します。
+      </p>
+    </section>  
+  </div>
+  <footer>
+    <div class="footer-content">
+        <p>©2025レンタルボーイフレンドサービス|東京・全国サービス可能</p>
+        <!-- 회사 소개 및 연락처 정보 -->
+        <div class="footer-intro">彼氏代行、レンタルボーイフレンド、恋人代行サービスを提供するウルフレントです。</div>
+        <div class="footer-hours">営業時間：24時間</div>
+        <div class="footer-email">Eメール: chugbunnam@gmail.com</div>
+        <a href="https://www.instagram.com/wolf_rent__" target="_blank" class="instagram-footer">Instagram: @wolf_rent__</a>
+
+    </div>
+    <!-- 구조화된 데이터: LocalBusiness -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "울프렌트",
+        "image": "https://wolfrent.netlify.app/logo.png",
+        "url": "https://wolfrent.netlify.app/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "대구",
+            "addressRegion": "대구광역시",
+            "addressCountry": "KR"
+        },
+        "description": "남친대행, 렌탈남친, 데이트대행 등 맞춤형 데이트 서비스를 제공하는 울프렌트.",
+        "openingHours": ["Mo-Su 00:00-23:59"]
+        }
+    </script>
+</footer>
+
+  <!-- [추가] JS: 스크롤 페이드인 애니메이션 -->
+  <script>
+    // 관찰 대상: .mission, .about, .services, .team
+    const fadeTargets = document.querySelectorAll('.mission, .about, .services, .team');
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 0.8s forwards';
+          io.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    fadeTargets.forEach(t => {
+      io.observe(t);
+    });
+
+    // fadeInUp keyframes
+    // 이미 CSS에서 정의한 바가 없으므로 추가
+    const styleEl = document.createElement('style');
+    styleEl.textContent = `
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(styleEl);
+  </script>
+</body>
+</html>

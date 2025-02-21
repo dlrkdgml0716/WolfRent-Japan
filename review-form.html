@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>レビューを書くWolf Rent - 彼氏代行・レンタルボーイフレンドサービス</title>
+  <meta name="description" content="実際のお客様の彼氏代行・レンタルボーイフレンドサービスレビューを作成してみてください。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://wolfrent.netlify.app/렌탈남친">
+
+  <!-- Open Graph, 트위터 카드 등 메타 태그는 그대로 -->
+  <meta property="og:title" content="レビューを書くWolf Rent - 彼氏代行・レンタルボーイフレンドサービス">
+  <meta property="og:description" content="実際のお客様の彼氏代行・レンタルボーイフレンドサービスレビューを作成してみてください。">
+  <meta property="og:image" content="https://wolfrent.netlify.app/logo.webp">
+  <meta property="og:url" content="https://wolfrent.netlify.app/렌탈남친">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="レビューを書くWolf Rent - 彼氏代行・レンタルボーイフレンドサービス">
+  <meta name="twitter:description" content="実際のお客様の彼氏代行・レンタルボーイフレンドサービスレビューを作成してみてください。">
+  <meta name="twitter:image" content="https://wolfrent.netlify.app/logo.webp">
+  <link rel="icon" type="image/webp" href="logo.webp">
+
+  <!-- 공통 header.js (Firebase 초기화 및 로그인 처리, Firestore db export 포함) -->
+  <script type="module" src="header.js"></script>
+
+  <style>
+    /* 기존 스타일 유지 */
+    :root {
+      --brand-color: #ffffff;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #1E1E1E;
+      margin: -20px -20px 20px -20px;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      height: 80px;
+      width: 80px;
+      margin-right: 5px;
+    }
+    .text {
+      height: 80px;
+      width: 160px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    .nav-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #1E1E1E;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: font-size 0.3s ease;
+    }
+    .nav-links a:hover {
+      font-size: 20px;
+    }
+    .nav-links a.active {
+      color: var(--brand-color)!important;
+      border-bottom: 2px solid var(--brand-color);
+      padding-bottom: 3px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    form input[type="submit"] {
+      background-color: #1E1E1E;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form input[type="submit"]:hover {
+      background-color: #333;
+    }
+    .back-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #1E1E1E;
+    }
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: -10px -10px 10px -10px;
+      }
+      .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .logo,
+      .text {
+        width: 60px;
+        height: 60px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .nav-links a {
+        margin: 5px;
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- 공통 헤더 (header.js 에서 로그인 관련 기능 포함) -->
+  <header>
+    <div class="header-left">
+      <img class="logo" src="logo.webp" alt="ウルフレントのロゴ – 彼氏代行・レンタルボーイフレンドサービス" loading="lazy" width="80" height="80">
+      <img class="text" src="text.webp" alt="ウルフレントテキストロゴ – 彼氏代行・レンタルボーイフレンド専門" loading="lazy" width="160" height="80">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="彼氏代行.html">About</a>
+        <a href="役割代行.html">Contents</a>
+        <a href="恋人代行.html">FAQ</a>
+        <a href="日本レンタルボーイフレンド.html">Review</a>
+        <a href="レンタルボーイフレンド.html">Counseling</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 리뷰 작성 폼 영역 -->
+  <main>
+    <h1>レビューを書く</h1>
+    <!-- action 속성 제거, id 부여 -->
+    <form id="reviewForm">
+      <label for="name">名前:</label>
+      <input type="text" id="name" name="name" required placeholder="名前を入力してください">
+
+      <label for="rating">評価 (1 ~ 5):</label>
+      <input type="number" id="rating" name="rating" min="1" max="5" required placeholder="1から5までの数字">
+
+      <label for="review">レビュー内容:</label>
+      <textarea id="review" name="review" rows="5" required placeholder="レビュー内容を書いてください"></textarea>
+
+      <input type="submit" value="レビューを送信する">
+    </form>
+    <div class="back-link">
+      <a href="日本のレンタルボーイフレンド.html">クチコミページに戻る</a>
+    </div>
+  </main>
+
+  <!-- 공통 푸터 (변경 없음) -->
+  <footer>
+    <div class="footer-content">
+        <p>©2025レンタルボーイフレンドサービス|東京・全国サービス可能</p>
+        <!-- 회사 소개 및 연락처 정보 -->
+        <div class="footer-intro">彼氏代行、レンタルボーイフレンド、恋人代行サービスを提供するウルフレントです。</div>
+        <div class="footer-hours">営業時間：24時間</div>
+        <div class="footer-email">Eメール: chugbunnam@gmail.com</div>
+        <a href="https://www.instagram.com/wolf_rent__" target="_blank" class="instagram-footer">Instagram: @wolf_rent__</a>
+
+    </div>
+    <!-- 구조화된 데이터: LocalBusiness -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "울프렌트",
+        "image": "https://wolfrent.netlify.app/logo.png",
+        "url": "https://wolfrent.netlify.app/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "대구",
+            "addressRegion": "대구광역시",
+            "addressCountry": "KR"
+        },
+        "description": "남친대행, 렌탈남친, 데이트대행 등 맞춤형 데이트 서비스를 제공하는 울프렌트.",
+        "openingHours": ["Mo-Su 00:00-23:59"]
+        }
+    </script>
+</footer>
+
+  <!-- Firestore를 이용한 리뷰 제출 처리 스크립트 -->
+  <script type="module">
+    import { db } from "./header.js";
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+
+    const reviewForm = document.getElementById("reviewForm");
+    reviewForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+ 
+      // 폼 데이터 가져오기
+      const name = document.getElementById("name").value.trim();
+      const rating = parseInt(document.getElementById("rating").value, 10);
+      const review = document.getElementById("review").value.trim();
+
+      // 간단한 검증 (필요에 따라 강화 가능)
+      if (!name || !review || rating < 1 || rating > 5) {
+        alert("入力値を確認してください。");
+        return;
+      }
+
+      try {
+        // "reviews" 컬렉션에 새 문서 추가 (작성 시간은 서버 타임스탬프 대신 클라이언트 Date 사용)
+        await addDoc(collection(db, "reviews"), {
+          name,
+          rating,
+          review,
+          createdAt: new Date()
+        });
+        alert("レビューが正常に送信されました！");
+        // 제출 후 리뷰 목록 페이지로 이동
+        window.location.href = "日本のレンタルボーイフレンド.html";
+      } catch (error) {
+        console.error("レビューを保存中にエラー:", error);
+        alert("レビューの送信中にエラーが発生しました。もう一度お試しください。");
+      }
+    });
+  </script>
+</body>
+</html>

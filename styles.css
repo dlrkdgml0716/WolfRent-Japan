@@ -1,0 +1,485 @@
+/* 기본 리셋 및 레이아웃 설정 */
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+
+/* CSS 변수 설정 - 테마 컬러 */
+:root {
+    --primary-color: #1E1E1E; /* 주요 색상 */
+    --brand-color: white;     /* 브랜드 색상 */
+    --light-bg: #f7f7f7;       /* 밝은 배경색 */
+    --footer-bg: #fafafa;      /* 푸터 배경색 */
+}
+
+/* 헤더 스타일 */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--primary-color); /* 헤더 배경 */
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.header-left .logo {
+    margin-right: 5px;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.nav-links a {
+    margin: 0 10px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--brand-color);
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    /* 부드러운 전환 효과 추가 */
+    transition: transform 0.3s ease;
+}
+.nav-links a:hover {
+    /* 폰트 크기 변화 대신 스케일 효과 사용 */
+    transform: scale(1.05);
+}
+.nav-links a.active {
+    color: var(--brand-color);
+    border-bottom: 2px solid var(--brand-color);
+    padding-bottom: 3px;
+}
+.spacer {
+    flex-grow: 1;
+}
+.googleLogin {
+    margin-left: 20px;
+}
+
+/* 로고 및 텍스트 이미지 크기 지정 (HTML에서 속성으로도 지정됨) */
+.logo {
+    height: 80px;
+    width: 80px;
+}
+.text {
+    height: 80px;
+    width: 160px;
+}
+
+/* 버튼 스타일 (CTA 등) */
+.button {
+    text-decoration: none;
+    color: var(--brand-color);
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: transform 0.3s ease; /* 전환 효과 적용 */
+}
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* 제목 및 본문 텍스트 스타일 */
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    color: var(--brand-color);
+}
+p {
+    text-align: center;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+/* 첫 화면 파트 */
+.part1 {
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+/* 배경 이미지에 밝기 필터 추가하여 텍스트 가독성 향상 */
+.background-image {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.pyt {
+    font-size: 4em;
+    font-family: sans-serif;
+    width: 258px;
+    color: var(--brand-color);
+    position: relative;
+    left: 50px;
+    bottom: -30px;
+    animation: slide 2s ease-out;
+}
+.slogan {
+    color: var(--brand-color);
+    position: relative;
+    left: 50px;
+    bottom: -20px;
+    animation: slide 2s ease-out;
+}
+@keyframes slide {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slide2 {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.pyf {
+    font-size: 4em;
+    font-family: sans-serif;
+    width: 258px;
+    color: var(--brand-color);
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    animation: slide2 2s;
+    text-align: start;
+}
+.contents1 {
+    color: var(--brand-color);
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    width: 250px;
+    text-align: start;
+    animation: slide2 2s;
+}
+/* 서비스 소개 섹션 */
+.services-section {
+    padding: 50px 20px;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.services-container-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center; /* 화살표 버튼과 컨테이너를 수평으로 정렬 */
+    justify-content: center;
+    width: 100%; /* 전체 너비를 사용 */
+    overflow: hidden; /* 자식 요소들이 부모 영역을 넘지 않게 숨기기 */
+}
+
+.services-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* 수평 스크롤을 가능하게 설정 */
+    scroll-behavior: smooth; /* 부드러운 스크롤 */
+    width: 100%; /* 부모 요소가 화면 크기에 맞게 크기 변동 */
+}
+
+.service-card {
+    flex-shrink: 0; /* 카드들이 줄어들지 않도록 설정 */
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1.0);
+}
+.services-title{
+    font-size: 40px;
+}
+
+/* 화살표 버튼 스타일 */
+.scroll-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 6rem;
+    color: red;
+    cursor: pointer;
+    z-index: 10; /* 버튼이 카드들 위에 보이게 설정 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.scroll-arrow:hover{
+    color: blue;
+}
+.left-arrow {
+    left: 10px; /* 좌측 화살표 위치 */
+}
+
+.right-arrow {
+    right: 10px; /* 우측 화살표 위치 */
+}
+
+.service-card h3 {
+    margin: 15px 0 10px;
+    color: var(--primary-color);
+    font-size: 23px;
+}
+.service-card p {
+    color: #333;
+    line-height: 1.4em;
+    font-size: 17px;
+}
+
+/* 이용 방법 섹션 */
+.howitworks-section {
+    padding: 50px 20px;
+    background-color: #FFF;
+    text-align: center;
+}
+.howitworks-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1300px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.step-box {
+    flex: 1;
+    background-color: var(--light-bg);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.step-box h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+.step-box p {
+    color: #333;
+    line-height: 1.4em;
+    text-align: start;
+}
+
+/* CTA 섹션 */
+.cta-section {
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--brand-color);
+}
+.cta-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.cta-section p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.cta-button {
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--brand-color);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #ccc;
+}
+
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    /* 기존의 모바일 스타일 */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .header-left {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-left .logo {
+        margin-right: 0;
+        margin-bottom: 5px;
+        height: 60px;
+        width: 60px;
+    }
+    .header-left .text {
+        margin-right: 0;
+        margin-bottom: 10px;
+        height: 60px;
+        width: 130px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        margin: 5px 0;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .googleLogin img {
+        width: 150px;
+    }
+    .spacer {
+        display: none;
+    }
+
+    /* 모바일 환경: part1 영역 내 텍스트 위치 재조정 */
+    .part1 {
+        height: auto;
+        padding: 20px 0;
+        background-position: center;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .pyt,
+    .slogan,
+    .pyf,
+    .contents1,
+    .contents2 {
+        position: static !important;
+        left: auto !important;
+        bottom: auto !important;
+        margin: 10px auto !important;
+        text-align: center !important;
+        animation: none;
+    }
+    .pyt,
+    .pyf {
+        font-size: 2.5em !important;
+    }
+    .services-container, .steps-container {
+        flex-wrap: wrap; /* 작은 화면에서는 자동 줄 바꿈 */
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card, .step-box {
+        max-width: 90% !important;
+    }
+
+    /* 모바일 화면에서 버튼 숨기기 */
+    .scroll-arrow {
+        display: none;
+    }
+}
+
+
+/* 블로그 피드 섹션 */
+#blog-feed {
+    padding: 30px 20px;
+    background-color: var(--footer-bg);
+}
+#blog-feed h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#feed-content ul {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+#feed-content li {
+    margin: 15px 0;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#feed-content li h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+#feed-content li p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5em;
+}
+#feed-content li:hover {
+    background-color: #f2f2f2;
+}
+
+/* 로그인 버튼 hover 시 이미지 변경 */
+.login-button:hover {
+    content: url(hoverlogin.webp);
+}
+
+/* fadeInUp 애니메이션 */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* 푸터 스타일 */
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+.footer-intro {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+.footer-email, .footer-hours {
+    color: #555;
+    margin: 5px 0;
+}
